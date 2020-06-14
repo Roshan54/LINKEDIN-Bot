@@ -28,7 +28,7 @@ driver.get(url)
 
 time.sleep(4)
 driver.find_element_by_id('username').send_keys("Parmeet757@gmail.com")
-driver.find_element_by_id('password').send_keys("meonLINKEDIN7")
+driver.find_element_by_id('password').send_keys("ZZ")
 driver.find_element_by_id('password').send_keys(Keys.RETURN)
 
 time.sleep(4)
@@ -67,9 +67,11 @@ def Location():
 	#USE LIST FOR MULTIPLE COUNTRY INPUTS AFTER GUI
 	time.sleep(4)
 	driver.find_element_by_xpath("//span[text()='Locations']").click()
+	time.sleep(4)
 	driver.find_element_by_xpath("//input[@placeholder='Add a country/region']").send_keys('India')
-	pag.click(420,400)
+	pag.moveTo(920,580)
 	#Apply Button instead of pag
+	
 
 
 # -----------------------------------------
@@ -77,5 +79,7 @@ def Location():
 search()
 #Con()
 Location()
+re_url = driver.current_url
+print(re_url)
 time.sleep(3)
 
